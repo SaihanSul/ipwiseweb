@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Received! | Next Step: Patent Audit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to the shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="subtle-background thank-you-page">
+
+    <header class="confirmation-header">
+        <div class="container">
+             <h1><span class="icon">✓</span> Your Request Has Been Received!</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="section-card">
+
+                <h2>Is Your Patent Portfolio an Untapped Goldmine... or a Ticking Liability?</h2>
+                <p style="text-align: center; font-size: 1.1em; max-width: 700px; margin-bottom: 30px;">You're one step closer to unlocking your IP's potential with IPWise. But while the platform connects you, understanding the <strong>true power and pitfalls</strong> of your existing patents is critical <em>right now</em>. Most innovators never really know.</p>
+
+                <hr>
+
+                <h3>Introducing the IPWise AI-Powered Patent Audit</h3>
+                <p>Stop guessing. Our audit leverages cutting-edge AI, real-time market data, and competitive intelligence to give you the brutal honesty and actionable insights needed to maximize your IP's value.</p>
+
+                <h3>What You'll Gain (The Benefits):</h3>
+                <ul>
+                    <li><strong>Uncover Realistic Market Value & Potential:</strong> We analyze current market comparables, licensing trends, and potential applications to reveal your patent's true valuation – and expose the hidden millions you might be leaving on the table if licensed or sold effectively.</li>
+                    <li><strong>Identify Eager Buyers & Licensees Now:</strong> Forget endless searching. Our AI pinpoints specific companies actively seeking technology like yours *today*, based on their R&D, acquisitions, product launches, and stated strategic needs. Get qualified leads delivered.</li>
+                    <li><strong>Anticipate Future Risks & Opportunities:</strong> See around corners. We flag potential infringement threats from emerging competitors and predict the technological obsolescence curve for your IP, allowing you to act proactively (license, divest, or enforce).</li>
+                    <li><strong>Receive Clear, Actionable Strategic Direction:</strong> End the ambiguity. Get a data-driven verdict: Is this patent a 'License Immediately', 'Develop & Hold', 'Sell Now', or 'Let Expire' asset? Make confident decisions backed by intelligence.</li>
+                    <li><strong>Gain Powerful Negotiation Leverage:</strong> Walk into licensing or sales discussions armed with independent, data-backed proof of your patent's value, demand, and strategic fit. Close better deals, faster.</li>
+                </ul>
+
+                 <!-- Funding Section -->
+                <div class="funding-section">
+                     <p><strong>Invest in Clarity, Fund the Future:</strong> Purchasing an audit provides immediate, critical intelligence for your IP strategy. Plus, <strong>every audit purchased directly funds the accelerated development and rollout of the core IPWise platform</strong> you're excited about. Get value now, and help build the future of IP licensing faster!</p>
+                </div>
+
+                <hr>
+
+                <h2>Ready to See Your Patent Through the Eyes of AI?</h2>
+                 <p style="text-align:center;">Discover the hidden opportunities and risks within your portfolio. See how our audit transforms abstract patent language into concrete business intelligence.</p>
+
+                <div class="button-center">
+                    <!-- Link to the Demo Audit Page -->
+                    <a href="demo-audit.html" class="cta-button cta-primary" style="margin-bottom: 15px;">View a Demo Audit</a>
+                    <br class="mobile-break" style="display: none;">
+                    <!-- Mailto link for consultation request with an ID for the script -->
+                    <a href="mailto:audits@ipwise.ai?subject=Patent%20Audit%20Inquiry" class="cta-button cta-secondary" id="request-consultation-btn">Request Audit Consultation</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a> |
+                <a href="mailto:info@ipwise.ai?subject=Question%20about%20IPWise">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const consultationButton = document.getElementById('request-consultation-btn');
+            if (consultationButton) {
+                consultationButton.addEventListener('click', function(event) {
+                    // Show the confirmation popup immediately
+                    alert('Request Sent! We will be in touch shortly.');
+                    // The default mailto link action will proceed after the alert is closed.
+                    // No need to event.preventDefault() unless you want to handle the mailto differently.
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* --- Modern Palette & Variables --- */
+:root {
+    --blue-modern: #4A90E2; --orange-soft: #FFCBA4; --blue-darker: #357ABD; --orange-darker: #FFB87D;
+    --background-base: #F9FAFB; --background-card: #FFFFFF; --text-primary: #2D3748; --text-secondary: #718096;
+    --success: #48BB78; --border-subtle: #E2E8F0; --warning: #ED8936; --danger: #E53E3E;
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+/* --- Subtle Background Pattern --- */
+.subtle-background {
+     background-color: var(--background-base);
+     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc1JyBoZWlnaHQ9JzUnPgo8cmVjdCB3aWR0aD0nNScgaGVpZ2h0PSc1JyBmaWxsPScjZjlmYWZiJy8+CjxyZWN0IHdpZHRoPScxJyBoZWlnaHQ9JzEnIGZpbGw9J2Nvb3InIGZpbGwtb3BhY2l0eT0nMC4xJy8+Cjwvc3ZnPg==');
+     background-repeat: repeat;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; } /* Smooth scroll for anchor links */
+body { font-family: 'Lato', sans-serif; line-height: 1.7; color: var(--text-primary); overflow-x: hidden; background-color: var(--background-base); /* Ensure body background */ }
+.container { max-width: 1100px; margin-left: auto; margin-right: auto; padding: 0 25px; } /* Centering container */
+
+/* --- Header (Landing Page Hero) --- */
+header.hero { padding: 60px 0 80px 0; text-align: center; color: #fff; background: linear-gradient(135deg, var(--blue-modern) 0%, var(--orange-soft) 100%); border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; }
+header.hero h1 { font-family: 'Poppins', sans-serif; font-size: clamp(2.5rem, 6vw, 3.8rem); margin-bottom: 0.5em; font-weight: 700; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+header.hero p.hero-subheadline { font-size: clamp(1rem, 2.5vw, 1.25rem); margin-bottom: 1.8em; color: rgba(255, 255, 255, 0.9); max-width: 700px; margin-left: auto; margin-right: auto; }
+
+/* --- Header (Confirmation Page) --- */
+.confirmation-header { padding: 50px 0; text-align: center; background-color: var(--background-card); border-bottom: 1px solid var(--border-subtle); }
+.confirmation-header h1 { font-family: 'Poppins', sans-serif; font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--success); /* Green color */ margin: 0; font-weight: 600; }
+.confirmation-header h1 .icon { font-size: 1.2em; margin-right: 10px; vertical-align: middle; }
+
+/* --- Header (Demo Audit Page) --- */
+.page-header { padding: 40px 0; text-align: center; background-color: var(--background-card); border-bottom: 1px solid var(--border-subtle); margin-bottom: 30px; }
+.page-header h1 { font-family: 'Poppins', sans-serif; font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--text-primary); margin: 0 0 10px 0; font-weight: 600; }
+.page-header .patent-subtitle { font-size: 1.1em; color: var(--text-secondary); font-style: italic; }
+.demo-audit-container { max-width: 900px; } /* Specific container for demo audit */
+
+/* --- General Section Styling --- */
+section { padding: 60px 0; }
+.section-card { background-color: var(--background-card); border-radius: 12px; padding: 40px; box-shadow: var(--shadow-soft); border: 1px solid var(--border-subtle); margin-bottom: 40px; }
+/* Adjust padding for non-landing pages */
+.thank-you-page .section-card, .demo-audit-page .audit-section { padding: 30px 40px; }
+
+h2 { font-family: 'Poppins', sans-serif; font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1em; color: var(--text-primary); font-weight: 600; text-align: center; }
+h3 { font-family: 'Poppins', sans-serif; font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 0.7em; color: var(--blue-modern); font-weight: 500; }
+/* Specific h3 for thank-you and demo */
+.thank-you-page h3, .demo-audit-page h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); margin-top: 1.5em; font-weight: 600; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.4em; }
+.demo-audit-page h3 { margin-top: 0; } /* Reset margin for first h3 in demo section */
+
+p { margin-bottom: 1.2em; color: var(--text-secondary); max-width: 750px; }
+.center-text { text-align: center; }
+.center-text p { margin-left: auto; margin-right: auto; }
+/* Wider paragraphs on thank-you/demo */
+.thank-you-page p, .demo-audit-page p { max-width: 800px; margin-left: auto; margin-right: auto; }
+.demo-audit-page .audit-section p, .demo-audit-page .audit-section li { max-width: 100%; margin-left: 0; margin-right: 0;}
+
+/* --- List Styling --- */
+ul, ol { list-style: none; padding-left: 0; margin-bottom: 1.5em; max-width: 800px; margin-left: auto; margin-right: auto;}
+.thank-you-page ul li { margin-bottom: 1em; padding-left: 30px; position: relative; }
+.thank-you-page ul li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: bold; font-size: 1.1em; top: 1px; }
+.demo-audit-page ul, .demo-audit-page ol { padding-left: 20px; margin-bottom: 1em; } /* Demo list padding */
+.demo-audit-page li { margin-bottom: 0.5em; }
+
+/* --- Button Styling & Animation --- */
+.cta-button { display: inline-block; padding: 14px 35px; border-radius: 8px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.05em; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); border: none; box-shadow: var(--shadow-soft); position: relative; overflow: hidden; margin: 5px; }
+.cta-primary { background: linear-gradient(135deg, var(--blue-modern) 0%, var(--orange-soft) 100%); color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.15); }
+.cta-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-medium); }
+.cta-secondary { background-color: var(--background-card); color: var(--blue-modern); border: 1px solid var(--blue-modern); }
+.cta-secondary:hover { background-color: var(--blue-modern); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 10px rgba(74, 144, 226, 0.3); }
+/* Specific size for demo/thankyou buttons */
+.thank-you-page .cta-button, .demo-audit-page .cta-button { font-size: 1em; padding: 12px 30px; }
+
+.landing-page .cta-primary { animation: pulse 2.5s infinite ease-in-out; } /* Only pulse on landing page */
+.button-center { text-align: center; margin-top: 30px; }
+.button-nav { margin-bottom: 30px; text-align: left; } /* For back button */
+
+/* --- Feature Grids & Columns (Landing Page) --- */
+.columns-3, .feature-grid, .audience-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+.column-item, .feature-item, .audience-column { background-color: var(--background-card); padding: 25px; border-radius: 10px; box-shadow: var(--shadow-soft); border: 1px solid var(--border-subtle); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+.column-item:hover, .feature-item:hover, .audience-column:hover { transform: translateY(-5px); box-shadow: var(--shadow-medium); }
+.feature-item h3, .column-item h3, .audience-column h3 { margin-top: 0; color: var(--blue-modern); border-bottom: none; padding-bottom: 0; } /* Override specific h3 style */
+.column-item p, .feature-item p, .audience-column p { flex-grow: 1; max-width: 100%; }
+.audience-list { list-style: none; padding-left: 0; flex-grow: 1; max-width: 100%; }
+.audience-list li { margin-bottom: 12px; padding-left: 25px; position: relative; color: var(--text-secondary); }
+.audience-list li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: bold; }
+
+/* --- Final CTA Section (Landing Page) --- */
+ .final-cta { text-align: center; background-color: var(--background-card); border-radius: 12px; padding: 50px 30px; box-shadow: var(--shadow-soft); border: 1px solid var(--border-subtle); }
+ .final-cta h2 { border: none; }
+ .final-cta form { margin-top: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
+ .final-cta .form-group { margin-bottom: 15px; }
+
+ /* --- Form Input Styling --- */
+ input[type="email"], input[type="text"] {
+     padding: 12px 15px;
+     border-radius: 6px;
+     border: 1px solid var(--border-subtle);
+     width: 100%;
+     font-size: 1em;
+     font-family: inherit;
+     display: block;
+ }
+ input[type="email"]:focus, input[type="text"]:focus {
+     outline: none;
+     border-color: var(--blue-modern);
+     box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+ }
+ label {
+     display: block;
+     margin-bottom: 5px;
+     font-weight: 500;
+     color: var(--text-primary);
+     text-align: left;
+     font-size: 0.95em;
+ }
+ .hidden { display: none; } /* Hidden honeypot field for Netlify */
+
+ /* --- Scarcity Message (Landing Page) --- */
+ #scarcity-message {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1em;
+    transition: color 0.3s ease, font-weight 0.3s ease, font-size 0.3s ease;
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: max-content;
+ }
+
+ /* --- Footer --- */
+ footer { text-align: center; padding: 40px 20px; margin-top: 40px; font-size: 0.9em; color: var(--text-secondary); border-top: 1px solid var(--border-subtle); }
+ footer a { color: var(--blue-modern); text-decoration: none; font-weight: 500; }
+ footer a:hover { text-decoration: underline; }
+
+/* --- Thank You Page Specifics --- */
+.funding-section { background-color: #eef4fc; border: 1px solid var(--blue-modern); border-radius: 8px; padding: 25px 30px; text-align: center; margin-top: 30px; margin-bottom: 30px; max-width: 850px; margin-left:auto; margin-right:auto;}
+.funding-section p { color: var(--blue-darker); font-weight: 500; margin-bottom: 0; font-size: 1.05em; max-width: 100%; }
+.funding-section strong { color: var(--blue-modern); }
+hr { border: none; height: 1px; background-color: var(--border-subtle); margin: 40px auto; max-width: 300px; }
+strong { color: var(--text-primary); font-weight: 700; }
+em { font-style: italic; }
+
+/* --- Demo Audit Page Specifics --- */
+.audit-section { background-color: var(--background-card); border-radius: 12px; padding: 30px 40px; box-shadow: var(--shadow-soft); border: 1px solid var(--border-subtle); margin-bottom: 30px; }
+.audit-section h4 { font-family: 'Poppins', sans-serif; font-size: clamp(1.1rem, 2.5vw, 1.3rem); margin-top: 1em; margin-bottom: 0.5em; color: var(--blue-darker); font-weight: 500; }
+.visual-placeholder { border: 2px dashed var(--border-subtle); padding: 30px; text-align: center; color: var(--text-secondary); font-style: italic; border-radius: 8px; margin: 15px 0; background-color: var(--background-base); }
+.interactive-placeholder { background-color: var(--blue-modern); color: white; padding: 10px 15px; border-radius: 5px; display: inline-block; font-weight: 500; margin-top: 10px; font-size: 0.9em; }
+.score { font-size: 2.5em; font-weight: 700; display: block; text-align: center; margin: 15px 0; }
+.score-low { color: var(--danger); }
+.score-med { color: var(--warning); }
+.score-high { color: var(--success); }
+.verdict-text { text-align: center; font-weight: 500; font-size: 1.1em; color: var(--text-primary); }
+
+ /* --- Animation Keyframes --- */
+ @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+
+ /* --- Responsive --- */
+ @media (max-width: 768px) {
+     .container, .demo-audit-container { padding: 0 15px; }
+     header.hero { padding: 40px 0 60px 0; border-radius: 0 0 20px 20px; }
+     .columns-3, .feature-grid, .audience-columns { grid-template-columns: 1fr; } /* Stack columns */
+     .section-card, .audience-column, .column-item, .feature-item { padding: 25px; }
+     .thank-you-page .section-card, .demo-audit-page .audit-section { padding: 20px 25px; }
+     .cta-button { width: 100%; text-align: center; margin-bottom: 15px; padding: 12px 25px; }
+     .landing-page header.hero .cta-button { width: auto; margin-bottom: 0; } /* Keep hero button normal size */
+     .landing-page #scarcity-message { width: 100%; margin-top: 15px; }
+     .landing-page .cta-button.cta-secondary { margin-bottom: 0; }
+     .final-cta form { max-width: 100%; }
+     .thank-you-page ul li { padding-left: 25px; }
+     .funding-section { padding: 20px; }
+     .mobile-break { display: block; } /* Show line break on mobile for buttons if needed */
+     /* Ensure thank you/demo buttons stack nicely */
+     .thank-you-page .button-center .cta-button,
+     .demo-audit-page .button-nav .cta-button {
+         width: auto; /* Allow buttons to size naturally */
+         display: inline-block; /* Keep them inline if space allows */
+         margin-bottom: 10px;
+     }
+      /* If stacking is preferred on mobile for thank-you/demo buttons: */
+      .thank-you-page .button-center .cta-button,
+      .demo-audit-page .button-nav .cta-button {
+          width: 90%; /* Or 100% if preferred */
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+     }
+
+ }
